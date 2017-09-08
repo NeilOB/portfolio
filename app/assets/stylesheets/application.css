@@ -1,0 +1,156 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+
+
+
+ #page1 {
+     background-color: lightgrey;
+ }
+
+ #page2 {
+     background-image: url("images/backgroundabout.jpg");
+     opacity: 0.5;
+ }
+
+ #page2 {
+   font-family: Futura;
+ font-size: 16px;
+ /*font-style: italic;*/
+ font-variant: normal;
+ font-weight: bold;
+ line-height: 26px;
+
+ }
+
+ #crouton ul {
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     width: 100%;
+     list-style: none;
+ }
+
+ #crouton li {
+     float: left;
+     margin: 0 10px;
+ }
+
+ #crouton a {
+     background: #ddd;
+   padding: .7em 1em;
+   float: left;
+   text-decoration: none;
+   color: black;
+   text-shadow: 0 1px 0 rgba(255,255,255,.5);
+   position: relative;
+ }
+
+ #crouton li:first-child a {
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+ }
+
+ #crouton li:last-child a {
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+ }
+
+ #crouton a:hover {
+     background: #99db76;
+ }
+
+ #crouton li:not(:first-child) > a::before {
+     content: "";
+     position: absolute;
+     top: 50%;
+     margin-top: -1.5em;
+     border-width: 1.5em 0 1.5em 1em;
+     border-style: solid;
+     border-color: #ddd #ddd #ddd transparent;
+     left: -1em;
+ }
+
+ #crouton li:not(:first-child) > a:hover::before {
+     border-color: #99db76 #99db76 #99db76 transparent;
+ }
+
+ #crouton li:not(:last-child) > a::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   margin-top: -1.5em;
+   border-top: 1.5em solid transparent;
+   border-bottom: 1.5em solid transparent;
+   border-left: 1em solid #ddd;
+   right: -1em;
+ }
+
+ #crouton li:not(:last-child) > a:hover::after {
+     border-left-color: #99db76;
+ }
+
+
+ #page2 h1 {
+   background-color: black;
+   color: white;
+
+ }
+
+
+
+ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+ body, html {
+     height: 100%;
+     color: #777;
+     line-height: 1.8;
+ }
+
+ /* Create a Parallax Effect */
+ .bgimg-1, .bgimg-2, .bgimg-3 {
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ /* First image (Logo. Full height) */
+ .bgimg-1 {
+
+     background-image: url('/images/screens.jpg');
+     min-height: 100%;
+ }
+
+ /* Second image (Portfolio) */
+ .bgimg-2 {
+     background-image: url("/images/about1.jpg");
+     min-height: 400px;
+ }
+
+ /* Third image (Contact) */
+ .bgimg-3 {
+     background-image: url("/images/about1.jpg");
+     min-height: 400px;
+ }
+
+ .w3-wide {letter-spacing: 10px;}
+ /*.w3-hover-opacity {cursor: pointer;}*/
+
+ /* Turn off parallax scrolling for tablets and phones */
+ @media only screen and (max-device-width: 1024px) {
+     .bgimg-1, .bgimg-2, .bgimg-3 {
+         background-attachment: scroll;
+     }
+ }
